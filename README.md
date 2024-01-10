@@ -27,7 +27,7 @@ To begin, access the Swagger definition for our sample application located at [
 
 Below is the relevant endpoint definition extracted from the Swagger documentation:
 
-    Copy to Clipboard"/api/books": {
+    "/api/books": {
       "get": {
         "summary": "Get a list of all books",
         "tags": [
@@ -59,7 +59,7 @@ In this step, we will craft a straightforward prompt utilizing the discovered en
 
 Just prompt the following in the GPT you're using:
 
-    Copy to ClipboardGenerate a SpecFlow functional test for the following endpoint:
+    Generate a SpecFlow functional test for the following endpoint:
     
     "/api/books": {
       "get": {
@@ -89,7 +89,7 @@ Executing this prompt results in various outputs based on the Large Language Mod
 
 An exemplary output could look as follows:
 
-    Copy to ClipboardFeature: Books API
+    Feature: Books API
     
     Scenario: Get a list of all books
       Given I have access to the Books API
@@ -113,7 +113,7 @@ This file, the step definition, contains the actual code that performs the testi
 
 Suppose we're using NUnit as our testing framework, along with RestSharp for making API calls, and FluentAssertions for our validations. To add complexity, let's assume we've created a wrapper around RestSharp to manage our API calls. In that case, here's how we can generate the code for ourselves:
 
-    Copy to ClipboardGenerate the C# SpecFlow step definition for the following Feature
+    Generate the C# SpecFlow step definition for the following Feature
     Use NUnit, RestSharp and FluentAssertions
     We use a class that wraps the api calls: ApiWrapper wrapper = new ApiWrapper(baseUrl);
     and here an example of get call: var items = wrapper.Get<List<Item>>("api/items");
@@ -129,7 +129,7 @@ Suppose we're using NUnit as our testing framework, along with RestSharp for mak
 
 And here's the AI output:
 
-    Copy to Clipboardusing TechTalk.SpecFlow;
+    using TechTalk.SpecFlow;
     using NUnit.Framework;
     using RestSharp;
     using System.Collections.Generic;
